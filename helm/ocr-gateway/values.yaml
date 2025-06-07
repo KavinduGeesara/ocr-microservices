@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: kgp9588/ocr-gateway
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8001
+  targetPort: 8001
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+env:
+  - name: KSERVE_URL
+    value: "http://ocr-model:8080/v2/models/ocr-model/infer"
