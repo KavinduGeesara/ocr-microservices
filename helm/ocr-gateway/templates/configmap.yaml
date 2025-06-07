@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "ocr-gateway.fullname" . }}-config
+  labels:
+    {{- include "ocr-gateway.labels" . | nindent 4 }}
+data:
+  GATEWAY_PORT: "8001"
+  LOG_LEVEL: "INFO"
+  MAX_FILE_SIZE: "10MB"
+  ALLOWED_EXTENSIONS: "jpg,jpeg,png,pdf"

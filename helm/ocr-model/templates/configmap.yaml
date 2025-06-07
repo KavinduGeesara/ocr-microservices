@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "ocr-model.fullname" . }}-config
+  labels:
+    {{- include "ocr-model.labels" . | nindent 4 }}
+data:
+  MODEL_NAME: "ocr-model"
+  LOG_LEVEL: "INFO"
+  METRICS_PORT: "8080"
+  TESSERACT_CONFIG: "--psm 6"

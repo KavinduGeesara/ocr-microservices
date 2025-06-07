@@ -4,7 +4,7 @@ metadata:
   name: ocr-gateway
   namespace: argocd
 spec:
-  project: default
+  project: ocr-project  # CHANGED: was 'default'
   source:
     repoURL: https://github.com/KavinduGeesara/ocr-microservices.git
     targetRevision: HEAD

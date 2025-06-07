@@ -4,7 +4,7 @@ metadata:
   name: ocr-model
   namespace: argocd
 spec:
-  project: default
+  project: ocr-project
   source:
     repoURL: https://github.com/KavinduGeesara/ocr-microservices.git
     targetRevision: HEAD
