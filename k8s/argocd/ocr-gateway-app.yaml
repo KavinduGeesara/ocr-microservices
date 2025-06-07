@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ocr-gateway
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/KavinduGeesara/ocr-microservices.git
+    targetRevision: HEAD
+    path: helm/ocr-gateway
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ocr-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
