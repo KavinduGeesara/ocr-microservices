@@ -10,13 +10,11 @@ spec:
   destinations:
   - namespace: ocr-app
     server: https://kubernetes.default.svc
+  - namespace: monitoring
+    server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   - group: ''
     kind: Namespace
-  - group: rbac.authorization.k8s.io
-    kind: Role
-  - group: rbac.authorization.k8s.io
-    kind: RoleBinding
   namespaceResourceWhitelist:
   - group: ''
     kind: Service
@@ -28,5 +26,14 @@ spec:
     kind: ServiceAccount
   - group: apps
     kind: Deployment
+  - group: apps
+    kind: ReplicaSet
+  - group: ''
+    kind: Pod
   - group: monitoring.coreos.com
     kind: ServiceMonitor
+  # ADD THESE TWO LINES TO FIX THE RBAC ISSUE:
+  - group: rbac.authorization.k8s.io
+    kind: Role
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
