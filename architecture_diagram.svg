@@ -1,0 +1,160 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">OCR Microservices Architecture</text>
+  
+  <!-- GCP VM Container -->
+  <rect x="50" y="60" width="1100" height="680" rx="10" fill="#e8f4f8" stroke="#3498db" stroke-width="3"/>
+  <text x="70" y="85" font-size="18" font-weight="bold" fill="#2c3e50">GCP Ubuntu VM (16GB RAM, 8 CPUs)</text>
+  
+  <!-- Minikube Cluster -->
+  <rect x="80" y="110" width="1040" height="580" rx="8" fill="#fff" stroke="#34495e" stroke-width="2"/>
+  <text x="100" y="135" font-size="16" font-weight="bold" fill="#2c3e50">Minikube Kubernetes Cluster</text>
+  
+  <!-- ArgoCD Namespace -->
+  <rect x="120" y="160" width="250" height="200" rx="5" fill="#e74c3c" fill-opacity="0.1" stroke="#e74c3c" stroke-width="2"/>
+  <text x="140" y="180" font-size="14" font-weight="bold" fill="#e74c3c">ArgoCD Namespace</text>
+  
+  <!-- ArgoCD Server -->
+  <rect x="140" y="190" width="80" height="60" rx="3" fill="#e74c3c" fill-opacity="0.8"/>
+  <text x="150" y="205" font-size="10" font-weight="bold" fill="white">ArgoCD</text>
+  <text x="150" y="218" font-size="10" fill="white">Server</text>
+  <text x="150" y="231" font-size="9" fill="white">:8443</text>
+  
+  <!-- AppProject/AppSet -->
+  <rect x="240" y="190" width="80" height="60" rx="3" fill="#c0392b" fill-opacity="0.8"/>
+  <text x="250" y="205" font-size="9" font-weight="bold" fill="white">AppProject</text>
+  <text x="250" y="218" font-size="9" fill="white">AppSet</text>
+  <text x="250" y="231" font-size="9" fill="white">Apps</text>
+  
+  <!-- Monitoring Namespace -->
+  <rect x="120" y="380" width="250" height="200" rx="5" fill="#27ae60" fill-opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="140" y="400" font-size="14" font-weight="bold" fill="#27ae60">Monitoring Namespace</text>
+  
+  <!-- Prometheus -->
+  <rect x="140" y="410" width="80" height="60" rx="3" fill="#ff6b35"/>
+  <text x="150" y="425" font-size="10" font-weight="bold" fill="white">Prometheus</text>
+  <text x="150" y="445" font-size="9" fill="white">:9090</text>
+  
+  <!-- Grafana -->
+  <rect x="240" y="410" width="80" height="60" rx="3" fill="#f39c12"/>
+  <text x="250" y="425" font-size="10" font-weight="bold" fill="white">Grafana</text>
+  <text x="250" y="438" font-size="10" fill="white">Dashboard</text>
+  <text x="250" y="451" font-size="9" fill="white">:3000</text>
+  
+  <!-- OCR Application Namespace -->
+  <rect x="420" y="160" width="280" height="420" rx="5" fill="#9b59b6" fill-opacity="0.1" stroke="#9b59b6" stroke-width="2"/>
+  <text x="440" y="180" font-size="14" font-weight="bold" fill="#9b59b6">OCR Application Namespace</text>
+  
+  <!-- OCR Model -->
+  <rect x="450" y="200" width="100" height="80" rx="5" fill="#3498db"/>
+  <text x="460" y="220" font-size="12" font-weight="bold" fill="white">OCR Model</text>
+  <text x="460" y="235" font-size="10" fill="white">(KServe)</text>
+  <text x="460" y="248" font-size="10" fill="white">Tesseract</text>
+  <text x="460" y="261" font-size="9" fill="white">:8080</text>
+  
+  <!-- OCR Gateway -->
+  <rect x="570" y="200" width="100" height="80" rx="5" fill="#2ecc71"/>
+  <text x="580" y="220" font-size="12" font-weight="bold" fill="white">OCR Gateway</text>
+  <text x="580" y="235" font-size="10" fill="white">(FastAPI)</text>
+  <text x="580" y="248" font-size="10" fill="white">API Server</text>
+  <text x="580" y="261" font-size="9" fill="white">:8001</text>
+  
+  <!-- Kubernetes Resources -->
+  <rect x="450" y="300" width="220" height="120" rx="5" fill="#34495e" fill-opacity="0.1" stroke="#34495e" stroke-width="1"/>
+  <text x="460" y="320" font-size="12" font-weight="bold" fill="#34495e">Kubernetes Resources</text>
+  
+  <!-- Resource boxes -->
+  <rect x="460" y="330" width="60" height="25" rx="2" fill="#95a5a6"/>
+  <text x="465" y="345" font-size="8" fill="white">ConfigMaps</text>
+  
+  <rect x="530" y="330" width="50" height="25" rx="2" fill="#95a5a6"/>
+  <text x="535" y="345" font-size="8" fill="white">Secrets</text>
+  
+  <rect x="590" y="330" width="70" height="25" rx="2" fill="#95a5a6"/>
+  <text x="595" y="345" font-size="8" fill="white">ServiceAccounts</text>
+  
+  <rect x="460" y="365" width="40" height="25" rx="2" fill="#95a5a6"/>
+  <text x="465" y="380" font-size="8" fill="white">RBAC</text>
+  
+  <rect x="510" y="365" width="50" height="25" rx="2" fill="#95a5a6"/>
+  <text x="515" y="380" font-size="8" fill="white">Services</text>
+  
+  <rect x="570" y="365" width="70" height="25" rx="2" fill="#95a5a6"/>
+  <text x="575" y="380" font-size="8" fill="white">ServiceMonitor</text>
+  
+  <!-- Docker Runtime -->
+  <rect x="450" y="440" width="220" height="80" rx="5" fill="#0db7ed" fill-opacity="0.1" stroke="#0db7ed" stroke-width="2"/>
+  <text x="460" y="460" font-size="12" font-weight="bold" fill="#0db7ed">Docker Runtime</text>
+  
+  <rect x="470" y="470" width="80" height="30" rx="3" fill="#0db7ed"/>
+  <text x="475" y="485" font-size="9" fill="white">OCR Model Image</text>
+  
+  <rect x="560" y="470" width="80" height="30" rx="3" fill="#0db7ed"/>
+  <text x="565" y="485" font-size="9" fill="white">Gateway Image</text>
+  
+  <!-- External Components -->
+  <rect x="750" y="160" width="320" height="420" rx="5" fill="#f39c12" fill-opacity="0.1" stroke="#f39c12" stroke-width="2"/>
+  <text x="770" y="180" font-size="14" font-weight="bold" fill="#f39c12">External Access & Storage</text>
+  
+  <!-- External Access URLs -->
+  <rect x="770" y="200" width="280" height="150" rx="3" fill="#ecf0f1" stroke="#bdc3c7"/>
+  <text x="780" y="220" font-size="12" font-weight="bold" fill="#2c3e50">External Access URLs</text>
+  
+  <text x="780" y="240" font-size="10" fill="#2c3e50">• ArgoCD: https://35.196.173.36:8443</text>
+  <text x="780" y="255" font-size="10" fill="#2c3e50">• Grafana: http://35.196.173.36:3000</text>
+  <text x="780" y="270" font-size="10" fill="#2c3e50">• Prometheus: http://35.196.173.36:9090</text>
+  <text x="780" y="285" font-size="10" fill="#2c3e50">• OCR Model: http://35.196.173.36:8080</text>
+  <text x="780" y="300" font-size="10" fill="#2c3e50">• OCR Gateway: http://35.196.173.36:8001</text>
+  
+  <!-- GitHub -->
+  <rect x="770" y="370" width="120" height="80" rx="5" fill="#333"/>
+  <text x="780" y="390" font-size="12" font-weight="bold" fill="white">GitHub</text>
+  <text x="780" y="405" font-size="10" fill="white">Repository</text>
+  <text x="780" y="420" font-size="9" fill="white">Source Code</text>
+  <text x="780" y="433" font-size="9" fill="white">Helm Charts</text>
+  
+  <!-- Docker Hub -->
+  <rect x="910" y="370" width="120" height="80" rx="5" fill="#2496ed"/>
+  <text x="920" y="390" font-size="12" font-weight="bold" fill="white">Docker Hub</text>
+  <text x="920" y="405" font-size="10" fill="white">Registry</text>
+  <text x="920" y="420" font-size="9" fill="white">OCR Images</text>
+  
+  <!-- Arrows -->
+  <!-- GitHub to ArgoCD -->
+  <path d="M 320 220 Q 400 220 450 240" stroke="#e74c3c" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="360" y="210" font-size="9" fill="#e74c3c">GitOps</text>
+  
+  <!-- ArgoCD to OCR App -->
+  <path d="M 320 280 Q 380 300 450 300" stroke="#9b59b6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="360" y="290" font-size="9" fill="#9b59b6">Deploy</text>
+  
+  <!-- OCR Model to Monitoring -->
+  <path d="M 450 250 Q 380 300 320 430" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="360" y="340" font-size="9" fill="#27ae60">Metrics</text>
+  
+  <!-- Gateway to Model -->
+  <path d="M 570 240 L 550 240" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="520" y="230" font-size="9" fill="#2c3e50">HTTP</text>
+  
+  <!-- Docker Hub to Cluster -->
+  <path d="M 910 410 Q 750 350 700 300" stroke="#0db7ed" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="780" y="340" font-size="9" fill="#0db7ed">Pull Images</text>
+  
+  <!-- External Access Arrow -->
+  <path d="M 700 240 L 770 240" stroke="#f39c12" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="720" y="230" font-size="9" fill="#f39c12">Port Forward</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+    </marker>
+  </defs>
+  
+  <!-- Data Flow -->
+  <text x="100" y="720" font-size="14" font-weight="bold" fill="#2c3e50">Data Flow: User Upload → FastAPI Gateway → KServe Model → Tesseract OCR → Text Response</text>
+</svg>
